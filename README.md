@@ -9,10 +9,10 @@ Requirements
 Using the code 
 
 -  Configure your AWS access keys.
--  Initialize working directory
+-  Initialize working directory:
       terraform init
 -  Run command:
       terraform plan
       terraform apply
--  Clean up the resources created
+-  Clean up the resources created:
       terraform destroy
