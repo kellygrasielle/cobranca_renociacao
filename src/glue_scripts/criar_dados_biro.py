@@ -35,7 +35,7 @@ def get_payment_pending_to_neg(dynamodb_table):
             KeyConditionExpression=Key('status').eq(
                 "PENDENTE") & Key('due_payment_date_contract').lte("20250131") ,
         )
-
+        print(response['Items'])
         if not 'Items' in response or len(response['Items']) == 0:
             print("no itens")
             return None

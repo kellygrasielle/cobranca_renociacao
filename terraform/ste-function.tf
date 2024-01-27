@@ -59,7 +59,7 @@ resource "aws_sfn_state_machine" "aws_step_function_workflow" {
          "Type":"Task",
          "Resource":"arn:aws:states:::glue:startJobRun.sync",
          "Parameters":{
-            "JobName":"${aws_glue_job.cobra_by_email.name}",
+            "JobName":"${aws_glue_job.cria_dados_biro.name}",
             "Arguments": {
             }
          },

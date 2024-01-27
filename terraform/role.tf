@@ -35,7 +35,8 @@ resource "aws_iam_role_policy" "my_s3_policy" {
         "s3:*"
       ],
       "Resource": [
-        "arn:aws:s3:::cobra*"
+        "arn:aws:s3:::cobra*",
+        "arn:aws:s3:::*"
       ]
     },
     {
@@ -45,18 +46,6 @@ resource "aws_iam_role_policy" "my_s3_policy" {
         ],
         "Resource": [
             "arn:aws:dynamodb:*"
-        ]
-    },
-    {
-        "Effect": "Allow",
-        "Action": [
-            "logs:CreateLogGroup",
-            "logs:CreateLogStream",
-            "logs:PutLogEvents"
-        ],
-        "Resource": [
-            "arn:aws:logs:*:*:*:/aws-glue/*",
-            "arn:aws:logs:*:*:*:/*"
         ]
     }
   ]

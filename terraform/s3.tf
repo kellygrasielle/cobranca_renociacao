@@ -8,10 +8,10 @@ resource "aws_s3_bucket" "biro" {
 
 }
 
-resource "aws_s3_object" "code_cobra_by_email_job" {
-  key    = "code_cobra_by_email_job"
+resource "aws_s3_object" "cria_dados_biro_script" {
+  key    = "${var.project_name}-cria-dados-biro-script"
   bucket = aws_s3_bucket.glue-scripts.id
-  source = "../src/glue_scripts/cobra_by_email.py"
+  source = "../src/glue_scripts/criar_dados_biro.py"
 
   tags = {
     Env = "test"
